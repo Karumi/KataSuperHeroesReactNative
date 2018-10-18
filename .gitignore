@@ -5,3 +5,4 @@ npm-debug.*
 yarn-error.log
 coverage/*
 artifacts/
+build/
