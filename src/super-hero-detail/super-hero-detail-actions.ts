@@ -1,7 +1,7 @@
 import { Action, ActionCreator, Dispatch } from "redux";
 import { ThunkAction } from "redux-thunk";
 import { action } from "typesafe-actions";
-import { SuperHero } from "../common/model";
+import { SuperHero } from "../core/model";
 import { LOADING_SUPER_HERO, SUPER_HERO_FETCHED } from "./super-hero-detail-constants";
 
 export const fetchSuperHeroeById: ActionCreator<

@@ -1,5 +1,5 @@
 import { ActionType } from "typesafe-actions";
-import { SuperHero } from "../common/model";
+import { SuperHero } from "../core/model";
 import * as superHeroDetailActions from "./super-hero-detail-actions";
 import { LOADING_SUPER_HERO, SUPER_HERO_FETCHED } from "./super-hero-detail-constants";
 
