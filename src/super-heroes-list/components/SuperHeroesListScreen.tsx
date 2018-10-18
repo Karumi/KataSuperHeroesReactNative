@@ -2,6 +2,7 @@ import * as React from "react";
 import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import { connect } from "react-redux";
 import { bindActionCreators, Dispatch } from "redux";
+import EmptyCase from "../../base-components/empty-case/EmptyCase";
 import Loading from "../../base-components/loading/Loading";
 import navigationOptions from "../../base-components/navigationOptions";
 import { SuperHero } from "../../core/model";
@@ -24,11 +25,13 @@ class SuperHeroesListScreen extends React.Component<Props> {
     }
     public render() {
         const { loading, superHeroes } = this.props;
+        const thereAreSuperHeroes = !superHeroes.isEmpty;
         return (
             <View
                 style={styles.screen}>
                 {loading && <Loading />}
-                <SuperHeroesList superHeroes={superHeroes} />
+                {!loading && thereAreSuperHeroes && <EmptyCase />}
+                {!thereAreSuperHeroes && <SuperHeroesList superHeroes={superHeroes} />}
             </View>
         );
     }
