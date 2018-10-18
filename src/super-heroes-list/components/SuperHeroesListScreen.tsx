@@ -1,7 +1,8 @@
 import * as React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import { connect } from "react-redux";
 import { bindActionCreators, Dispatch } from "redux";
+import Loading from "../../base-components/loading/Loading";
 import navigationOptions from "../../base-components/navigationOptions";
 import { SuperHero } from "../../core/model";
 import { RootAction, RootState } from "../../store";
@@ -26,7 +27,7 @@ class SuperHeroesListScreen extends React.Component<Props> {
         return (
             <View
                 style={styles.screen}>
-                {loading && <Text>Loading.</Text>}
+                {loading && <Loading />}
                 <SuperHeroesList superHeroes={superHeroes} />
             </View>
         );

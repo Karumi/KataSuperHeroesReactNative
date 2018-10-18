@@ -44,9 +44,11 @@ const styles = StyleSheet.create({
     },
     badge: {
         alignSelf: "flex-end",
+        position: "absolute",
         width: 90,
         height: 101,
-        margin: 16,
+        right: 16,
+        bottom: 16,
         zIndex: 3,
     },
 });
