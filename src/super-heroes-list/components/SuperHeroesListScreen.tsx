@@ -6,7 +6,7 @@ import SuperHeroCell from "./SuperHeroCell";
 
 const sh = new SuperHero("Scarlet Witch",
     "https://i.annihil.us/u/prod/marvel/i/mg/9/b0/537bc2375dfb9.jpg",
-    false,
+    true,
     "Scarlet Witch was born at the Wundagore base of the High Evolutionary, she and her twin "
     + "brother Pietro were the children of Romani couple Django and Marya Maximoff. The "
     + "High Evolutionary supposedly abducted the twins when they were babies and "
