@@ -1,0 +1,26 @@
+{
+  "name": "kata-super-heroes-react-native",
+  "main": "node_modules/expo/AppEntry.js",
+  "private": false,
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "fixLint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --fix",
+    "test": "jest",
+    "testWatching": "yarn test --watch",
+    "updateSnapshots": "yarn test --updateSnapshot"
+  },
+  "dependencies": {
+    "expo": "^30.0.1",
+    "react": "16.3.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz"
+  },
+  "version": "1.0.0",
+  "description": "Super Heroes Kata for React Native Developers in Typescript.",
+  "repository": "https://github.com/Karumi/KataSuperHeroesReactNative.git",
+  "author": "Pedro Vicente Gómez Sánchez <pedro@karumi.com>",
+  "license": "Apache-2.0"
+}
