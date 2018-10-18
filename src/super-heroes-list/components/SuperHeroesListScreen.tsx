@@ -1,23 +1,52 @@
 import * as React from "react";
-import { Text } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
+import { connect } from "react-redux";
+import { bindActionCreators, Dispatch } from "redux";
 import navigationOptions from "../../base-components/navigationOptions";
 import { SuperHero } from "../../core/model";
-import SuperHeroCell from "./SuperHeroCell";
+import { RootAction, RootState } from "../../store";
+import { fetchSuperHeroes } from "../super-heroes-list-actions";
+import SuperHeroesList from "./SuperHeroesList";
 
-const sh = new SuperHero("Scarlet Witch",
-    "https://i.annihil.us/u/prod/marvel/i/mg/9/b0/537bc2375dfb9.jpg",
-    true,
-    "Scarlet Witch was born at the Wundagore base of the High Evolutionary, she and her twin "
-    + "brother Pietro were the children of Romani couple Django and Marya Maximoff. The "
-    + "High Evolutionary supposedly abducted the twins when they were babies and "
-    + "experimented on them, once he was disgusted with the results, he returned them to"
-    + " Wundagore, disguised as regular mutants.");
+interface Props {
+    readonly loading: boolean;
+    readonly superHeroes: SuperHero[];
+    readonly onMount: () => void;
+}
 
-class SuperHeroesListScreen extends React.Component {
+class SuperHeroesListScreen extends React.Component<Props> {
+
     public static navigationOptions = navigationOptions("Kata Super Heroes");
+
+    public componentWillMount() {
+        this.props.onMount();
+    }
     public render() {
-        return <SuperHeroCell superHero={sh} />;
+        const { loading, superHeroes } = this.props;
+        return (
+            <View
+                style={styles.screen}>
+                {loading && <Text>Loading.</Text>}
+                <SuperHeroesList superHeroes={superHeroes} />
+            </View>
+        );
     }
 }
 
-export default SuperHeroesListScreen;
+const styles = StyleSheet.create({
+    screen: {
+        flex: 1,
+        backgroundColor: "#22282F",
+    },
+});
+
+const mapStateToProps = (state: RootState) => ({
+    loading: state.superHeroesList.loading,
+    superHeroes: state.superHeroesList.superHeroes,
+});
+
+const mapDispatchToProps = (dispatch: Dispatch<RootAction>) => bindActionCreators({
+    onMount: fetchSuperHeroes,
+}, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(SuperHeroesListScreen);

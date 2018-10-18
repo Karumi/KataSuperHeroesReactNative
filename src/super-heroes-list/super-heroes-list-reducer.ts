@@ -19,9 +19,15 @@ export default function superHeroesListReducer(
     state: SuperHeroesListState = initialState, action: SuperHeroesListActions) {
     switch (action.type) {
         case LOADING_SUPER_HEROES:
-            return state;
+            return Object.assign({}, state, {
+                loading: true,
+                superHeroes: [],
+            });
         case SUPER_HEROES_FETCHED:
-            return state;
+            return Object.assign({}, state, {
+                loading: false,
+                superHeroes: action.payload.superHeroes,
+            });
         default:
             return state;
     }

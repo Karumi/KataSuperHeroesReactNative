@@ -6,7 +6,7 @@ import { SuperHero } from "../../core/model";
 import images from "./images/images";
 
 interface Props {
-    superHero: SuperHero;
+    readonly superHero: SuperHero;
 }
 
 class SuperHeroCell extends React.Component<Props> {
