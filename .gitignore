@@ -4,3 +4,4 @@ npm-debug.*
 .jest
 yarn-error.log
 coverage/*
+artifacts/
