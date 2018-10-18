@@ -22,5 +22,12 @@
   "description": "Super Heroes Kata for React Native Developers in Typescript.",
   "repository": "https://github.com/Karumi/KataSuperHeroesReactNative.git",
   "author": "Pedro Vicente Gómez Sánchez <pedro@karumi.com>",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/react": "^16.4.18",
+    "@types/react-native": "^0.57.7",
+    "react-native-typescript-transformer": "^1.2.10",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.3"
+  }
 }
