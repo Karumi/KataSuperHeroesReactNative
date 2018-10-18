@@ -1,8 +1,9 @@
 import * as React from "react";
+import { Text } from "react-native";
 
 class App extends React.Component {
     public render() {
-        return null;
+        return <Text>Hello Super Heroes</Text>;
     }
 }
 
