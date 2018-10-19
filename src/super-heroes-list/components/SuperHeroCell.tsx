@@ -1,25 +1,28 @@
 import { LinearGradient } from "expo";
 import * as React from "react";
-import { Image, ImageBackground, StyleSheet } from "react-native";
+import { Image, ImageBackground, StyleSheet, TouchableHighlight } from "react-native";
 import { Text } from "react-native";
 import { SuperHero } from "../../core/model";
 import images from "./images/images";
 
 interface Props {
     readonly superHero: SuperHero;
+    readonly onTap: (superHero: SuperHero) => void;
 }
 
 class SuperHeroCell extends React.Component<Props> {
     public render() {
         const superHero = this.props.superHero;
         return (
-            <ImageBackground
-                style={styles.container}
-                source={{ uri: superHero.picture }}>
-                <Text style={styles.name}>{this.props.superHero.name}</Text>
-                <LinearGradient style={styles.gradient} colors={["transparent", "#000"]} />
-                {superHero.isAvenger && <Image style={styles.badge} source={images.avengersBadge} />}
-            </ImageBackground>
+            <TouchableHighlight onPress={() => this.props.onTap(this.props.superHero)}>
+                <ImageBackground
+                    style={styles.container}
+                    source={{ uri: superHero.picture }}>
+                    <Text style={styles.name}>{this.props.superHero.name}</Text>
+                    <LinearGradient style={styles.gradient} colors={["transparent", "#000"]} />
+                    {superHero.isAvenger && <Image style={styles.badge} source={images.avengersBadge} />}
+                </ImageBackground>
+            </TouchableHighlight>
         );
     }
 }

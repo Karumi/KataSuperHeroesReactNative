@@ -6,11 +6,13 @@ import EmptyCase from "../../base-components/empty-case/EmptyCase";
 import Loading from "../../base-components/loading/Loading";
 import navigationOptions from "../../base-components/navigationOptions";
 import { SuperHero } from "../../core/model";
+import { openSuperHeroDetailScreen } from "../../router";
 import { RootAction, RootState } from "../../store";
 import { fetchSuperHeroes } from "../super-heroes-list-actions";
 import SuperHeroesList from "./SuperHeroesList";
 
 interface Props {
+    readonly navigation: any;
     readonly loading: boolean;
     readonly superHeroes: SuperHero[];
     readonly onMount: () => void;
@@ -23,7 +25,9 @@ class SuperHeroesListScreen extends React.Component<Props> {
     public componentWillMount() {
         this.props.onMount();
     }
+
     public render() {
+        const navigate = this.props.navigation.navigate;
         const { loading, superHeroes } = this.props;
         const thereAreSuperHeroes = !superHeroes.isEmpty;
         const shouldShowEmptyCase = !loading && !thereAreSuperHeroes;
@@ -33,7 +37,9 @@ class SuperHeroesListScreen extends React.Component<Props> {
                 style={styles.screen}>
                 {loading && <Loading />}
                 {shouldShowEmptyCase && <EmptyCase />}
-                {shouldShowSuperHeroesList && <SuperHeroesList superHeroes={superHeroes} />}
+                {shouldShowSuperHeroesList && <SuperHeroesList
+                    onSuperHeroCellTap={(superHero) => openSuperHeroDetailScreen(navigate, superHero.name)}
+                    superHeroes={superHeroes} />}
             </View>
         );
     }

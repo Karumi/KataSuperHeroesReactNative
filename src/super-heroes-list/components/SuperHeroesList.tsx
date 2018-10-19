@@ -5,13 +5,16 @@ import SuperHeroCell from "./SuperHeroCell";
 
 interface Props {
     readonly superHeroes: SuperHero[];
+    readonly onSuperHeroCellTap: (superHero: SuperHero) => void;
 }
 
 class SuperHeroesList extends React.Component<Props> {
     public render() {
         return <FlatList
             data={this.props.superHeroes}
-            renderItem={({ item }) => <SuperHeroCell superHero={item} />}
+            renderItem={({ item }) => <SuperHeroCell
+                onTap={(sh) => this.props.onSuperHeroCellTap(sh)}
+                superHero={item} />}
             keyExtractor={(item) => item.name}
         />;
     }
