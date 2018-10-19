@@ -19,6 +19,7 @@
     "fp-ts": "^1.9.0",
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
+    "react-native-mock-render": "^0.1.2",
     "react-navigation": "^2.18.0",
     "react-redux": "^5.0.7",
     "redux": "^4.0.1",
@@ -32,6 +33,7 @@
   "author": "Pedro Vicente Gómez Sánchez <pedro@karumi.com>",
   "license": "Apache-2.0",
   "devDependencies": {
+    "@types/expo": "^30.0.0",
     "@types/jest": "^23.3.5",
     "@types/react": "^16.4.18",
     "@types/react-native": "^0.57.7",
@@ -64,7 +66,13 @@
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native-maps|react-native-super-grid|expo-react-native-adapter|react-native-iphone-x-helper|native-base|react-native|lottie-react-native|expo|react-native-maps|react-native-svg|react-native-branch|native-base-shoutem-theme|react-native-easy-grid|react-native-drawer|react-native-vector-icons|react-native-keyboard-aware-scroll-view|react-navigation|native-base|@expo|react-native-scrollable-tab-view)/)"
-    ]
+      "node_modules/(?!(expo*|expo-asset|expo-location|expo-constants|expo-core|react-native-maps|react-native-super-grid|expo-react-native-adapter|react-native-iphone-x-helper|native-base|react-native|lottie-react-native|expo|react-native-maps|react-native-svg|react-native-branch|native-base-shoutem-theme|react-native-easy-grid|react-native-drawer|react-native-vector-icons|react-native-keyboard-aware-scroll-view|react-navigation|native-base|@expo|react-native-scrollable-tab-view)/)"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/src/test-utils/setup-tests.js",
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    }
   }
 }
