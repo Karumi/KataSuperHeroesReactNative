@@ -32,7 +32,7 @@ class SuperHeroDetailScreen extends React.Component<Props> {
     }
 
     public componentWillReceiveProps(nextProps: Props) {
-        if (this.props.superHero.isNone && nextProps.superHero.isSome()) {
+        if (this.props.superHero.isNone() && nextProps.superHero.isSome()) {
             const superHero = nextProps.superHero;
             const navigationBarTitle = superHero.map((sh) => sh.name).getOrElse("");
             setTimeout(() => {
@@ -43,7 +43,7 @@ class SuperHeroDetailScreen extends React.Component<Props> {
 
     public render() {
         const { loading, superHero } = this.props;
-        const doesTheSuperHeroExist = superHero.isSome;
+        const doesTheSuperHeroExist = superHero.isSome();
         const shouldShowEmptyCase = !loading && !doesTheSuperHeroExist;
         return (
             <View

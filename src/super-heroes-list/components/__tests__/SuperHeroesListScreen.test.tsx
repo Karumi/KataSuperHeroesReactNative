@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Provider } from "react-redux";
 import * as renderer from "react-test-renderer";
 import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
@@ -39,9 +38,7 @@ it("renders a loading component if the users list state is loading", () => {
 
     const component = renderer
         .create(
-            <Provider store={store}>
-                <SuperHeroesListScreen navigation={mockPlainNavigation} />
-            </Provider>,
+                <SuperHeroesListScreen store={store} navigation={mockPlainNavigation} />,
         )
         .toJSON();
     expect(component).toMatchSnapshot();
