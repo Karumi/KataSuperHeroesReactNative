@@ -4,7 +4,7 @@ import { ThunkAction } from "redux-thunk";
 import { action } from "typesafe-actions";
 import { SuperHero } from "../core/model";
 import { getSuperHeroById } from "../core/super-heroes-repository";
-import { LOADING_SUPER_HERO, SUPER_HERO_FETCHED } from "./super-hero-detail-constants";
+import { CLEAR_SUPER_HERO, LOADING_SUPER_HERO, SUPER_HERO_FETCHED } from "./super-hero-detail-constants";
 
 export const fetchSuperHeroById: ActionCreator<
     ThunkAction<any, any, any, any>> = (superHeroId: string) => (dispatch: Dispatch) => {
@@ -13,6 +13,8 @@ export const fetchSuperHeroById: ActionCreator<
             getSuperHeroById(superHeroId).then((sh) => dispatch(superHeroFetched(sh)));
         }, 1000);
     };
+
+export const clearSuperHero: ActionCreator<Action> = () => action(CLEAR_SUPER_HERO);
 
 export const loadingSuperHero: Action =
     action(LOADING_SUPER_HERO);

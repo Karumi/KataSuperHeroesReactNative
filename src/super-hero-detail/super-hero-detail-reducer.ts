@@ -2,7 +2,7 @@ import { none, Option } from "fp-ts/lib/Option";
 import { ActionType } from "typesafe-actions";
 import { SuperHero } from "../core/model";
 import * as superHeroDetailActions from "./super-hero-detail-actions";
-import { LOADING_SUPER_HERO, SUPER_HERO_FETCHED } from "./super-hero-detail-constants";
+import { CLEAR_SUPER_HERO, LOADING_SUPER_HERO, SUPER_HERO_FETCHED } from "./super-hero-detail-constants";
 
 export type SuperHeroDetailActions = ActionType<typeof superHeroDetailActions>;
 
@@ -29,6 +29,8 @@ export default function superHeroesListReducer(
                 loading: false,
                 superHero: action.payload.superHero,
             });
+        case CLEAR_SUPER_HERO:
+            return initialState;
         default:
             return state;
     }

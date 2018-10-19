@@ -11,6 +11,7 @@ interface Props {
 }
 
 class SuperHeroCell extends React.Component<Props> {
+
     public render() {
         const superHero = this.props.superHero;
         return (

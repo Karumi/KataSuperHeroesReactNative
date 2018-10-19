@@ -112,6 +112,6 @@ export function getSuperHeroById(id: string): Promise<Option<SuperHero>> {
         setTimeout(() => {
             const superHero = superHeroes.find((sh) => sh.name === id);
             resolve(fromNullable(superHero));
-        }, 1500);
+        }, 300);
     });
 }
