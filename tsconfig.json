@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"experimentalDecorators": true,
+		"forceConsistentCasingInFileNames": true,
+		"importHelpers": true,
+		"jsx": "react",
+		"lib": [
+			"es2017"
+		],
+		"module": "es2015",
+		"moduleResolution": "node",
+		"noEmitHelpers": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"outDir": "build/dist",
+		"sourceMap": true,
+		"strict": true,
+		"target": "es2017"
+	},
+	"exclude": [
+		"build",
+		"node_modules",
+		"android",
+		"App.js",
+		"ios",
+		"build"
+	],
+	"types": [
+		"typePatches"
+	]
+}

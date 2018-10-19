@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render a loading component while the super hero is being fetched 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#22282F",
+      "flex": 1,
+    }
+  }
+>
+  <Loading />
+</View>
+`;
+
+exports[`render an empty case component if the super hero fetched does not exist 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#22282F",
+      "flex": 1,
+    }
+  }
+>
+  <EmptyCase />
+</View>
+`;
+
+exports[`renders the super hero loaded 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#22282F",
+      "flex": 1,
+    }
+  }
+/>
+`;

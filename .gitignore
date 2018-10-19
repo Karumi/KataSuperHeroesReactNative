@@ -1,0 +1,8 @@
+node_modules/**/*
+.expo/*
+npm-debug.*
+.jest
+yarn-error.log
+coverage/*
+artifacts/
+build/

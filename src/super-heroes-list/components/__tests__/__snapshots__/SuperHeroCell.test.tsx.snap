@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a regular super hero and does not show the avengers badge 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  hasTVPreferredFocus={undefined}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  nativeID={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={null}
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <View
+    style={
+      Object {
+        "height": 200,
+        "justifyContent": "flex-end",
+        "zIndex": 0,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "https://i.annihil.us/u/prod/marvel/i/mg/9/b0/537bc2375dfb9.jpg",
+        }
+      }
+      style={
+        Object {
+          "height": "100%",
+          "position": "absolute",
+          "resizeMode": "cover",
+          "width": "100%",
+          "zIndex": 1,
+        }
+      }
+    />
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 20,
+          "margin": 16,
+          "zIndex": 3,
+        }
+      }
+    >
+      Scarlet Witch
+    </Text>
+    <ExponentLinearGradient
+      colors={
+        Array [
+          0,
+          4278190080,
+        ]
+      }
+      endPoint={undefined}
+      locations={null}
+      startPoint={undefined}
+      style={
+        Object {
+          "height": 100,
+          "position": "absolute",
+          "width": "100%",
+          "zIndex": 2,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`renders an avenger super hero and shows the avengers badge 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  hasTVPreferredFocus={undefined}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  nativeID={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={null}
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <View
+    style={
+      Object {
+        "height": 200,
+        "justifyContent": "flex-end",
+        "zIndex": 0,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "https://i.annihil.us/u/prod/marvel/i/mg/c/60/55b6a28ef24fa.jpg",
+        }
+      }
+      style={
+        Object {
+          "height": "100%",
+          "position": "absolute",
+          "resizeMode": "cover",
+          "width": "100%",
+          "zIndex": 1,
+        }
+      }
+    />
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 20,
+          "margin": 16,
+          "zIndex": 3,
+        }
+      }
+    >
+      Iron Man
+    </Text>
+    <ExponentLinearGradient
+      colors={
+        Array [
+          0,
+          4278190080,
+        ]
+      }
+      endPoint={undefined}
+      locations={null}
+      startPoint={undefined}
+      style={
+        Object {
+          "height": 100,
+          "position": "absolute",
+          "width": "100%",
+          "zIndex": 2,
+        }
+      }
+    />
+    <Image
+      source="avengersBadge"
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "bottom": 16,
+          "height": 101,
+          "position": "absolute",
+          "right": 16,
+          "width": 90,
+          "zIndex": 3,
+        }
+      }
+    />
+  </View>
+</View>
+`;
