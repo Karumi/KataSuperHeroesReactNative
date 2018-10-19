@@ -26,12 +26,14 @@ class SuperHeroesListScreen extends React.Component<Props> {
     public render() {
         const { loading, superHeroes } = this.props;
         const thereAreSuperHeroes = !superHeroes.isEmpty;
+        const shouldShowEmptyCase = !loading && !thereAreSuperHeroes;
+        const shouldShowSuperHeroesList = !loading && thereAreSuperHeroes;
         return (
             <View
                 style={styles.screen}>
                 {loading && <Loading />}
-                {!loading && thereAreSuperHeroes && <EmptyCase />}
-                {!thereAreSuperHeroes && <SuperHeroesList superHeroes={superHeroes} />}
+                {shouldShowEmptyCase && <EmptyCase />}
+                {shouldShowSuperHeroesList && <SuperHeroesList superHeroes={superHeroes} />}
             </View>
         );
     }

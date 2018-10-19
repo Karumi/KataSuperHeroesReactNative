@@ -5,6 +5,7 @@ const navigationOptions = (navTitle: string) => ({
     headerTintColor: colors.navigationBar.tintColor,
     headerStyle: {
         backgroundColor: colors.navigationBar.backgroundColor,
+        borderBottomWidth: 0,
     },
 });
 

@@ -103,7 +103,7 @@ const superHeroes: SuperHero[] = [
 
 export function getSuperHeroes(): Promise<SuperHero[]> {
     return new Promise<SuperHero[]>((resolve) => {
-        setTimeout(() => resolve([]), 1500);
+        setTimeout(() => resolve(superHeroes), 1500);
     });
 }
 
