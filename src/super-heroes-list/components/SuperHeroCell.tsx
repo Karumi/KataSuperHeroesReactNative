@@ -1,6 +1,6 @@
 import { LinearGradient } from "expo";
 import * as React from "react";
-import { Image, ImageBackground, StyleSheet, TouchableHighlight } from "react-native";
+import { Image, StyleSheet, TouchableHighlight, View } from "react-native";
 import { Text } from "react-native";
 import { SuperHero } from "../../core/model";
 import images from "./images/images";
@@ -16,13 +16,16 @@ class SuperHeroCell extends React.Component<Props> {
         const superHero = this.props.superHero;
         return (
             <TouchableHighlight onPress={() => this.props.onTap(this.props.superHero)}>
-                <ImageBackground
-                    style={styles.container}
-                    source={{ uri: superHero.picture }}>
+                <View
+                    style={styles.container}>
+                    <Image
+                        style={styles.backgroundImage}
+                        source={{ uri: superHero.picture }}
+                    />
                     <Text style={styles.name}>{this.props.superHero.name}</Text>
                     <LinearGradient style={styles.gradient} colors={["transparent", "#000"]} />
                     {superHero.isAvenger && <Image style={styles.badge} source={images.avengersBadge} />}
-                </ImageBackground>
+                </View>
             </TouchableHighlight>
         );
     }
@@ -33,6 +36,13 @@ const styles = StyleSheet.create({
         height: 200,
         justifyContent: "flex-end",
         zIndex: 0,
+    },
+    backgroundImage: {
+        position: "absolute",
+        height: "100%",
+        width: "100%",
+        zIndex: 1,
+        resizeMode: "cover",
     },
     gradient: {
         height: 100,
