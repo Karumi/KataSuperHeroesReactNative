@@ -29,7 +29,7 @@ class SuperHeroesListScreen extends React.Component<Props> {
     public render() {
         const navigate = this.props.navigation.navigate;
         const { loading, superHeroes } = this.props;
-        const thereAreSuperHeroes = !superHeroes.isEmpty;
+        const thereAreSuperHeroes = superHeroes.length !== 0;
         const shouldShowEmptyCase = !loading && !thereAreSuperHeroes;
         const shouldShowSuperHeroesList = !loading && thereAreSuperHeroes;
         return (
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = (state: RootState) => ({
-    loading: state.superHeroesList.loading,
+    loading: state.superHeroesList.loading === true,
     superHeroes: state.superHeroesList.superHeroes,
 });
 

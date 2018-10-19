@@ -8,8 +8,8 @@ import { LOADING_SUPER_HEROES, SUPER_HEROES_FETCHED } from "./super-heroes-list-
 export const fetchSuperHeroes: ActionCreator<
     ThunkAction<any, any, any, any>> = () => (dispatch: Dispatch) => {
         dispatch(loadingSuperHeroes);
-        getSuperHeroes().then((superHeroes) => {
-            dispatch(superHeroesFetched(superHeroes));
+        return getSuperHeroes().then((superHeroes) => {
+            return dispatch(superHeroesFetched(superHeroes));
         });
     };
 
