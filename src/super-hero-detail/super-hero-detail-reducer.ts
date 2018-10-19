@@ -12,7 +12,7 @@ export interface SuperHeroDetailState {
 }
 
 const initialState: SuperHeroDetailState = {
-    loading: false,
+    loading: true,
     superHero: none,
 };
 

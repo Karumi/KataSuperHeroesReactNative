@@ -14,6 +14,8 @@ This repository contains a ReactNative application to show Super Heroes informat
 
 This Application is based on two screens:
 
+![screencasst](./art/screencast.gif)
+
 * ``MainScreen`` showing a list of super heroes with name, photo and a special badge if is part of the Avengers Team.
 
 ![mainscreen](./art/superHeroesListScreenshot.png)

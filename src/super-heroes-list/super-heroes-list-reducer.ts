@@ -11,7 +11,7 @@ export interface SuperHeroesListState {
 }
 
 const initialState: SuperHeroesListState = {
-    loading: false,
+    loading: true,
     superHeroes: [],
 };
 
