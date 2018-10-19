@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Provider } from "react-redux";
 import * as renderer from "react-test-renderer";
-import { Store } from "redux";
 import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
+import { action } from "typesafe-actions";
 import { mockPlainNavigation } from "../../../test-doubles/navigation";
 import { anyListOfSuperHeroes } from "../../../test-doubles/super-heroes";
 import SuperHeroesListScreen from "../SuperHeroesListScreen";
@@ -23,6 +23,14 @@ jest.mock("../../../base-components/empty-case/EmptyCase", () => {
 jest.mock("../SuperHeroesList", () => {
     return {
         default: "SuperHeroesList",
+    };
+});
+
+const anyFetchSuperHeroesAction = action("fetchSuperHeroes");
+
+jest.mock("../../super-heroes-list-actions", () => {
+    return {
+        fetchSuperHeroes: (() => anyFetchSuperHeroesAction),
     };
 });
 
@@ -61,7 +69,18 @@ it("renders the list of super heroes if we are not fetching the info and we have
     expect(component).toMatchSnapshot();
 });
 
-function givenAStoreInTheLoadingState(): Store {
+it("invokes the onMount prop when the component is mounted", () => {
+    const store = givenAStoreLoadedWithSuperHeroes();
+
+    renderer.create(
+        <SuperHeroesListScreen store={store} navigation={mockPlainNavigation} />,
+    );
+
+    const actions = store.getActions();
+    expect(actions).toEqual([anyFetchSuperHeroesAction]);
+});
+
+function givenAStoreInTheLoadingState() {
     const middlewares = [thunk];
     return configureStore(middlewares)({
         superHeroesList: {
@@ -71,7 +90,7 @@ function givenAStoreInTheLoadingState(): Store {
     });
 }
 
-function givenAStoreLoadedButWithoutSuperHeroes(): Store {
+function givenAStoreLoadedButWithoutSuperHeroes() {
     const middlewares = [thunk];
     const mockStore = configureStore(middlewares);
     return mockStore({
@@ -82,7 +101,7 @@ function givenAStoreLoadedButWithoutSuperHeroes(): Store {
     });
 }
 
-function givenAStoreLoadedWithSuperHeroes(): Store {
+function givenAStoreLoadedWithSuperHeroes() {
     const middlewares = [thunk];
     const mockStore = configureStore(middlewares);
     return mockStore({
