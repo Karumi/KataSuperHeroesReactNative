@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { connect } from "react-redux";
 import { bindActionCreators, Dispatch } from "redux";
 import EmptyCase from "../../base-components/empty-case/EmptyCase";

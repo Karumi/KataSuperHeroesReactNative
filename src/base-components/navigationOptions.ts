@@ -1,6 +1,6 @@
 import colors from "./colors";
 
-const navigationOptions = (navTitle: string) => ({
+const navigationOptions = (navTitle: string = "") => ({
     title: navTitle,
     headerTintColor: colors.navigationBar.tintColor,
     headerStyle: {

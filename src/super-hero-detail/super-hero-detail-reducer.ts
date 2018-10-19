@@ -1,3 +1,4 @@
+import { none, Option } from "fp-ts/lib/Option";
 import { ActionType } from "typesafe-actions";
 import { SuperHero } from "../core/model";
 import * as superHeroDetailActions from "./super-hero-detail-actions";
@@ -7,21 +8,27 @@ export type SuperHeroDetailActions = ActionType<typeof superHeroDetailActions>;
 
 export interface SuperHeroDetailState {
     readonly loading: boolean;
-    readonly superHero?: SuperHero;
+    readonly superHero: Option<SuperHero>;
 }
 
 const initialState: SuperHeroDetailState = {
     loading: false,
-    superHero: null,
+    superHero: none,
 };
 
 export default function superHeroesListReducer(
     state: SuperHeroDetailState = initialState, action: SuperHeroDetailActions) {
     switch (action.type) {
         case LOADING_SUPER_HERO:
-            return state;
+            return Object.assign({}, state, {
+                loading: true,
+                superHero: none,
+            });
         case SUPER_HERO_FETCHED:
-            return state;
+            return Object.assign({}, state, {
+                loading: false,
+                superHero: action.payload.superHero,
+            });
         default:
             return state;
     }
