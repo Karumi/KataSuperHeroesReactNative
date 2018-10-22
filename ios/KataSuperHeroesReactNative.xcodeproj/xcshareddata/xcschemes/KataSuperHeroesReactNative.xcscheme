@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0620"
+   LastUpgradeVersion = "0940"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "NO"
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "katasuperheroesreactnative.app"
-               BlueprintName = "katasuperheroesreactnative"
-               ReferencedContainer = "container:katasuperheroesreactnative.xcodeproj">
+               BuildableName = "KataSuperHeroesReactNative.app"
+               BlueprintName = "KataSuperHeroesReactNative"
+               ReferencedContainer = "container:KataSuperHeroesReactNative.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "katasuperheroesreactnativeTests.xctest"
-               BlueprintName = "katasuperheroesreactnativeTests"
-               ReferencedContainer = "container:katasuperheroesreactnative.xcodeproj">
+               BuildableName = "KataSuperHeroesReactNativeTests.xctest"
+               BlueprintName = "KataSuperHeroesReactNativeTests"
+               ReferencedContainer = "container:KataSuperHeroesReactNative.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "katasuperheroesreactnativeTests.xctest"
-               BlueprintName = "katasuperheroesreactnativeTests"
-               ReferencedContainer = "container:katasuperheroesreactnative.xcodeproj">
+               BuildableName = "KataSuperHeroesReactNativeTests.xctest"
+               BlueprintName = "KataSuperHeroesReactNativeTests"
+               ReferencedContainer = "container:KataSuperHeroesReactNative.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "katasuperheroesreactnative.app"
-            BlueprintName = "katasuperheroesreactnative"
-            ReferencedContainer = "container:katasuperheroesreactnative.xcodeproj">
+            BuildableName = "KataSuperHeroesReactNative.app"
+            BlueprintName = "KataSuperHeroesReactNative"
+            ReferencedContainer = "container:KataSuperHeroesReactNative.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "katasuperheroesreactnative.app"
-            BlueprintName = "katasuperheroesreactnative"
-            ReferencedContainer = "container:katasuperheroesreactnative.xcodeproj">
+            BuildableName = "KataSuperHeroesReactNative.app"
+            BlueprintName = "KataSuperHeroesReactNative"
+            ReferencedContainer = "container:KataSuperHeroesReactNative.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "katasuperheroesreactnative.app"
-            BlueprintName = "katasuperheroesreactnative"
-            ReferencedContainer = "container:katasuperheroesreactnative.xcodeproj">
+            BuildableName = "KataSuperHeroesReactNative.app"
+            BlueprintName = "KataSuperHeroesReactNative"
+            ReferencedContainer = "container:KataSuperHeroesReactNative.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
