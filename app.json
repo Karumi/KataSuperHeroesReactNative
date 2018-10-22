@@ -1,34 +1,4 @@
 {
-  "expo": {
-    "name": "KataSuperHeroesReactNative",
-    "description": "This project is really great.",
-    "slug": "KataSuperHeroesReactNative",
-    "privacy": "public",
-    "sdkVersion": "30.0.0",
-    "platforms": ["ios", "android"],
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#e2e2e2"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "packagerOpts": {
-      "sourceExts": [
-        "ts",
-        "tsx"
-      ],
-      "transformer": "node_modules/react-native-typescript-transformer/index.js"
-    }
-  }
+  "displayName": "KataSuperHeroesReactNative",
+  "name": "katasuperheroesreactnative"
 }

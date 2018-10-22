@@ -1,6 +1,6 @@
 {
   "presets": [
-    "babel-preset-expo"
+    "babel-preset-react-native-stage-0/decorator-support"
   ],
   "env": {
     "development": {

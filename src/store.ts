@@ -1,6 +1,6 @@
-import { applyMiddleware, combineReducers, compose, createStore } from "redux";
+import { applyMiddleware, combineReducers, createStore } from "redux";
 import thunk from "redux-thunk";
-import devToolsEnhancer from "remote-redux-devtools";
+import { composeWithDevTools } from "remote-redux-devtools";
 import { StateType } from "typesafe-actions";
 import { SuperHeroDetailActions } from "./super-hero-detail/super-hero-detail-reducer";
 import superHeroDetailReducer from "./super-hero-detail/super-hero-detail-reducer";
@@ -16,9 +16,8 @@ const rootReducer = combineReducers({
 });
 
 function configureStore(initialState?: object) {
-    const middleware = compose(
+    const middleware = composeWithDevTools(
         applyMiddleware(thunk),
-        devToolsEnhancer(),
     );
     return createStore(
         rootReducer,

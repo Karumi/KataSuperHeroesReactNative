@@ -6,6 +6,7 @@ import { action } from "typesafe-actions";
 import { mockPlainNavigation } from "../../../test-doubles/navigation";
 import { anyListOfSuperHeroes } from "../../../test-doubles/super-heroes";
 import SuperHeroesListScreen from "../SuperHeroesListScreen";
+import { Provider } from "react-redux";
 
 jest.mock("../../../base-components/loading/Loading", () => {
     return {
@@ -38,7 +39,9 @@ it("renders a loading component if the users list state is loading", () => {
 
     const component = renderer
         .create(
-                <SuperHeroesListScreen store={store} navigation={mockPlainNavigation} />,
+            <Provider store={store} >
+                <SuperHeroesListScreen navigation={mockPlainNavigation} />
+            </Provider>
         )
         .toJSON();
     expect(component).toMatchSnapshot();
@@ -49,7 +52,9 @@ it("renders an empty case component if the list of super heroes is empty", () =>
 
     const component = renderer
         .create(
-            <SuperHeroesListScreen store={store} navigation={mockPlainNavigation} />,
+            <Provider store={store} >
+                <SuperHeroesListScreen navigation={mockPlainNavigation} />
+            </Provider>
         )
         .toJSON();
     expect(component).toMatchSnapshot();
@@ -60,7 +65,9 @@ it("renders the list of super heroes if we are not fetching the info and we have
 
     const component = renderer
         .create(
-            <SuperHeroesListScreen store={store} navigation={mockPlainNavigation} />,
+            <Provider store={store} >
+                <SuperHeroesListScreen navigation={mockPlainNavigation} />
+            </Provider>
         )
         .toJSON();
     expect(component).toMatchSnapshot();
@@ -70,7 +77,9 @@ it("invokes the onMount prop when the component is mounted", () => {
     const store = givenAStoreLoadedWithSuperHeroes();
 
     renderer.create(
-        <SuperHeroesListScreen store={store} navigation={mockPlainNavigation} />,
+        <Provider store={store}>
+            <SuperHeroesListScreen navigation={mockPlainNavigation} />
+        </Provider>
     );
 
     const actions = store.getActions();

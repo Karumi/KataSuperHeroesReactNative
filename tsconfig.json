@@ -1,32 +1,41 @@
 {
-	"compilerOptions": {
-		"allowSyntheticDefaultImports": true,
-		"experimentalDecorators": true,
-		"forceConsistentCasingInFileNames": true,
-		"importHelpers": true,
-		"jsx": "react",
-		"lib": [
-			"es2017"
-		],
-		"module": "es2015",
-		"moduleResolution": "node",
-		"noEmitHelpers": true,
-		"noImplicitReturns": true,
-		"noUnusedLocals": true,
-		"outDir": "build/dist",
-		"sourceMap": true,
-		"strict": true,
-		"target": "es2017"
-	},
-	"exclude": [
-		"build",
-		"node_modules",
-		"android",
-		"App.js",
-		"ios",
-		"build"
-	],
-	"types": [
-		"typePatches"
-	]
+  "compilerOptions": {
+    "module": "es2015",
+    "target": "es2015",
+    "jsx": "react",
+    "rootDir": "./src",
+    "outDir": "./build",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "preserveConstEnums": true,
+    "allowJs": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node"
+  },
+  "filesGlob": [
+    "typings/index.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "node_modules/typescript/lib/lib.es6.d.ts"
+  ],
+  "types": [
+    "react",
+    "react-dom",
+    "react-native"
+  ],
+  "exclude": [
+    "build",
+    "node_modules",
+    "jest.config.js",
+    "index.js",
+    "coverage",
+    "./src/**/*.test.ts",
+    "./src/**/*.test.tsx"
+  ],
+  "compileOnSave": false
 }
