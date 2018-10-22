@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Image, StyleSheet, TouchableHighlight, View } from "react-native";
 import { Text } from "react-native";
+import LinearGradient from "react-native-linear-gradient";
 import { SuperHero } from "../../core/model";
 
 interface Props {
@@ -27,6 +28,7 @@ class SuperHeroCell extends React.Component<Props> {
                         source={{ uri: superHero.picture }}
                     />
                     <Text style={styles.name}>{this.props.superHero.name}</Text>
+                    <LinearGradient style={styles.gradient} colors={["transparent", "#000"]} />
                 </View>
             </TouchableHighlight>
         );
