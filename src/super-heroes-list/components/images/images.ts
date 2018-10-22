@@ -1,5 +1,7 @@
+import * as badge from "./ic-avengers.png";
+
 const images =  {
-    avengersBadge: "",
+    avengersBadge: "ic-avengers",
 };
 
 export default images;

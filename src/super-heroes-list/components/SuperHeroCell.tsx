@@ -3,6 +3,7 @@ import { Image, StyleSheet, TouchableHighlight, View } from "react-native";
 import { Text } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import { SuperHero } from "../../core/model";
+import images from "./images/images";
 
 interface Props {
     readonly superHero: SuperHero;
@@ -29,6 +30,15 @@ class SuperHeroCell extends React.Component<Props> {
                     />
                     <Text style={styles.name}>{this.props.superHero.name}</Text>
                     <LinearGradient style={styles.gradient} colors={["transparent", "#000"]} />
+                    {superHero.isAvenger && <Image style={{
+                        alignSelf: "flex-end",
+                        position: "absolute",
+                        width: 90,
+                        height: 101,
+                        right: 16,
+                        bottom: 16,
+                        zIndex: 3,
+                    }} source={{ uri: images.avengersBadge }} />}
                 </View>
             </TouchableHighlight>
         );
