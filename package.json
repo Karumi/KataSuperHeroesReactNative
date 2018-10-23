@@ -6,9 +6,15 @@
     "start": "react-native start",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
-    "test": "jest"
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "fixLint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --fix",
+    "test": "jest",
+    "testWatching": "yarn test --watch",
+    "updateSnapshots": "yarn test --updateSnapshot",
+    "clean": "rimraf build"
   },
   "dependencies": {
+    "@types/react-redux": "^6.0.9",
     "fp-ts": "^1.9.0",
     "react": "16.6.0-alpha.8af6728",
     "react-native": "0.57.3",
@@ -20,7 +26,7 @@
     "typesafe-actions": "^2.0.4"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.5",
+    "@types/jest": "^23.3.7",
     "@types/react": "^16.4.18",
     "@types/react-native": "^0.57.7",
     "@types/react-navigation": "^2.0.24",
@@ -35,6 +41,7 @@
     "react-test-renderer": "16.6.0-alpha.8af6728",
     "redux-mock-store": "^1.5.3",
     "remote-redux-devtools": "^0.5.13",
+    "rimraf": "^2.6.2",
     "ts-jest": "^23.10.4",
     "tslint": "^5.11.0",
     "typescript": "^3.1.3",
@@ -48,8 +55,8 @@
       "js"
     ],
     "transform": {
-      "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
-      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+      "\\.(ts|tsx)$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
     "testPathIgnorePatterns": [

@@ -18,23 +18,12 @@ jest.mock("../../super-hero-detail-actions", () => {
     };
 });
 
-jest.mock("../../../base-components/loading/Loading", () => {
-    return {
-        default: "Loading",
-    };
-});
+jest.mock("../../../base-components/loading/Loading", () => "Loading");
 
-jest.mock("../../../base-components/empty-case/EmptyCase", () => {
-    return {
-        default: "EmptyCase",
-    };
-});
+jest.mock("../../../base-components/empty-case/EmptyCase", () => "EmptyCase");
 
-jest.mock("../../../super-heroes-list/components/SuperHeroCell", () => {
-    return {
-        defatult: "SuperHeroCell",
-    };
-});
+jest.mock("../../../super-heroes-list/components/SuperHeroCell", () => "SuperHeroCell");
+
 it("invokes the onMount prop when it renders", () => {
     const store = givenAStoreLoadingASuperHero();
     givenTheComponentIsInitializedForASuperHeroWithId(anySuperHeroId);
@@ -68,7 +57,7 @@ it("render an empty case component if the super hero fetched does not exist", ()
 
     const component = renderer.create(
         <Provider store={store}>
-            <SuperHeroDetailScreen navigation={navigationWithMockedParams} />,
+            <SuperHeroDetailScreen navigation={navigationWithMockedParams} />
         </Provider>,
     ).toJSON();
 

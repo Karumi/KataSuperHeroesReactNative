@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StyleSheet, View } from "react-native";
 import { connect } from "react-redux";
-import { bindActionCreators, Dispatch, Action } from "redux";
+import { Action, bindActionCreators, Dispatch } from "redux";
 import EmptyCase from "../../base-components/empty-case/EmptyCase";
 import Loading from "../../base-components/loading/Loading";
 import navigationOptions from "../../base-components/navigationOptions";
