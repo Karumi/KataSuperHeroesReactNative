@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Provider } from "react-redux";
 import * as renderer from "react-test-renderer";
 import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
@@ -7,23 +8,11 @@ import { mockPlainNavigation } from "../../../test-doubles/navigation";
 import { anyListOfSuperHeroes } from "../../../test-doubles/super-heroes";
 import SuperHeroesListScreen from "../SuperHeroesListScreen";
 
-jest.mock("../../../base-components/loading/Loading", () => {
-    return {
-        default: "Loading",
-    };
-});
+jest.mock("../../../base-components/loading/Loading", () => "Loading");
 
-jest.mock("../../../base-components/empty-case/EmptyCase", () => {
-    return {
-        default: "EmptyCase",
-    };
-});
+jest.mock("../../../base-components/empty-case/EmptyCase", () => "EmptyCase");
 
-jest.mock("../SuperHeroesList", () => {
-    return {
-        default: "SuperHeroesList",
-    };
-});
+jest.mock("../SuperHeroesList", () => "SuperHeroesList");
 
 const anyFetchSuperHeroesAction = action("fetchSuperHeroes");
 
@@ -38,7 +27,9 @@ it("renders a loading component if the users list state is loading", () => {
 
     const component = renderer
         .create(
-                <SuperHeroesListScreen store={store} navigation={mockPlainNavigation} />,
+            <Provider store={store} >
+                <SuperHeroesListScreen navigation={mockPlainNavigation} />
+            </Provider>,
         )
         .toJSON();
     expect(component).toMatchSnapshot();
@@ -49,7 +40,9 @@ it("renders an empty case component if the list of super heroes is empty", () =>
 
     const component = renderer
         .create(
-            <SuperHeroesListScreen store={store} navigation={mockPlainNavigation} />,
+            <Provider store={store} >
+                <SuperHeroesListScreen navigation={mockPlainNavigation} />
+            </Provider>,
         )
         .toJSON();
     expect(component).toMatchSnapshot();
@@ -60,7 +53,9 @@ it("renders the list of super heroes if we are not fetching the info and we have
 
     const component = renderer
         .create(
-            <SuperHeroesListScreen store={store} navigation={mockPlainNavigation} />,
+            <Provider store={store} >
+                <SuperHeroesListScreen navigation={mockPlainNavigation} />
+            </Provider>,
         )
         .toJSON();
     expect(component).toMatchSnapshot();
@@ -70,7 +65,9 @@ it("invokes the onMount prop when the component is mounted", () => {
     const store = givenAStoreLoadedWithSuperHeroes();
 
     renderer.create(
-        <SuperHeroesListScreen store={store} navigation={mockPlainNavigation} />,
+        <Provider store={store}>
+            <SuperHeroesListScreen navigation={mockPlainNavigation} />
+        </Provider>,
     );
 
     const actions = store.getActions();

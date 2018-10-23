@@ -1,15 +1,20 @@
-import { Option } from "fp-ts/lib/Option";
+import { fromNullable, Option } from "fp-ts/lib/Option";
 import * as React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { NavigationScreenProps } from "react-navigation";
 import { connect } from "react-redux";
-import { bindActionCreators, Dispatch } from "redux";
+import { Action, bindActionCreators, Dispatch } from "redux";
 import EmptyCase from "../../base-components/empty-case/EmptyCase";
 import Loading from "../../base-components/loading/Loading";
 import navigationOptions from "../../base-components/navigationOptions";
 import { SuperHero } from "../../core/model";
-import { RootAction, RootState } from "../../store";
+import { RootState } from "../../store";
 import SuperHeroCell from "../../super-heroes-list/components/SuperHeroCell";
 import { clearSuperHero, fetchSuperHeroById } from "../super-hero-detail-actions";
+
+interface NavigationParams {
+    title: string;
+}
 
 interface Props {
     readonly navigation: any;
@@ -20,7 +25,8 @@ interface Props {
 }
 class SuperHeroDetailScreen extends React.Component<Props> {
 
-    public static navigationOptions = ({ navigation }) => navigationOptions(navigation.state.params.title);
+    public static navigationOptions = ({ navigation }: NavigationScreenProps<NavigationParams>) =>
+        navigationOptions(fromNullable(navigation.state.params).map((p: NavigationParams) => p.title).getOrElse(""))
 
     public componentWillMount() {
         const superHeroId = this.props.navigation.getParam("superHeroId");
@@ -28,7 +34,9 @@ class SuperHeroDetailScreen extends React.Component<Props> {
     }
 
     public componentWillUnmount() {
-        this.props.onUnmount();
+        setTimeout(() => {
+            this.props.onUnmount();
+        }, 500);
     }
 
     public componentWillReceiveProps(nextProps: Props) {
@@ -82,7 +90,7 @@ const mapStateToProps = (state: RootState) => ({
     superHero: state.superHeroDetail.superHero,
 });
 
-const mapDispatchToProps = (dispatch: Dispatch<RootAction>) => bindActionCreators({
+const mapDispatchToProps = (dispatch: Dispatch<Action>) => bindActionCreators({
     onMount: fetchSuperHeroById,
     onUnmount: clearSuperHero,
 }, dispatch);

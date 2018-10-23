@@ -1,5 +1,5 @@
 const images =  {
-    avengersBadge: require("./ic-avengers.png"),
+    avengersBadge: "ic_avengers",
 };
 
 export default images;

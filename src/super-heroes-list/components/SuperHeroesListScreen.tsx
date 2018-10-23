@@ -1,13 +1,13 @@
 import * as React from "react";
 import { StyleSheet, View } from "react-native";
 import { connect } from "react-redux";
-import { bindActionCreators, Dispatch } from "redux";
+import { Action, bindActionCreators, Dispatch } from "redux";
 import EmptyCase from "../../base-components/empty-case/EmptyCase";
 import Loading from "../../base-components/loading/Loading";
 import navigationOptions from "../../base-components/navigationOptions";
 import { SuperHero } from "../../core/model";
 import { openSuperHeroDetailScreen } from "../../router";
-import { RootAction, RootState } from "../../store";
+import { RootState } from "../../store";
 import { fetchSuperHeroes } from "../super-heroes-list-actions";
 import SuperHeroesList from "./SuperHeroesList";
 
@@ -57,7 +57,7 @@ const mapStateToProps = (state: RootState) => ({
     superHeroes: state.superHeroesList.superHeroes,
 });
 
-const mapDispatchToProps = (dispatch: Dispatch<RootAction>) => bindActionCreators({
+const mapDispatchToProps = (dispatch: Dispatch<Action>) => bindActionCreators({
     onMount: fetchSuperHeroes,
 }, dispatch);
 

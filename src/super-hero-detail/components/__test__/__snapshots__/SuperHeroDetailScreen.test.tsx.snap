@@ -34,5 +34,32 @@ exports[`renders the super hero loaded 1`] = `
       "flex": 1,
     }
   }
-/>
+>
+  <RCTScrollView>
+    <View>
+      <SuperHeroCell
+        onTap={[Function]}
+        superHero={
+          SuperHero {
+            "description": "Scarlet Witch was born at the Wundagore base of the High Evolutionary, she and her twin brother Pietro were the children of Romani couple Django and Marya Maximoff. The High Evolutionary supposedly abducted the twins when they were babies and experimented on them, once he was disgusted with the results, he returned them to Wundagore, disguised as regular mutants.",
+            "isAvenger": false,
+            "name": "Scarlet Witch",
+            "picture": "https://i.annihil.us/u/prod/marvel/i/mg/9/b0/537bc2375dfb9.jpg",
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 16,
+            "margin": 16,
+          }
+        }
+      >
+        Scarlet Witch was born at the Wundagore base of the High Evolutionary, she and her twin brother Pietro were the children of Romani couple Django and Marya Maximoff. The High Evolutionary supposedly abducted the twins when they were babies and experimented on them, once he was disgusted with the results, he returned them to Wundagore, disguised as regular mutants.
+      </Text>
+    </View>
+  </RCTScrollView>
+</View>
 `;

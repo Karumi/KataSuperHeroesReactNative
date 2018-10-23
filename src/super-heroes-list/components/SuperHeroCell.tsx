@@ -1,7 +1,7 @@
-import { LinearGradient } from "expo";
 import * as React from "react";
 import { Image, StyleSheet, TouchableHighlight, View } from "react-native";
 import { Text } from "react-native";
+import LinearGradient from "react-native-linear-gradient";
 import { SuperHero } from "../../core/model";
 import images from "./images/images";
 
@@ -19,12 +19,26 @@ class SuperHeroCell extends React.Component<Props> {
                 <View
                     style={styles.container}>
                     <Image
-                        style={styles.backgroundImage}
+                        style={{
+                            position: "absolute",
+                            height: "100%",
+                            width: "100%",
+                            zIndex: 1,
+                            resizeMode: "cover",
+                        }}
                         source={{ uri: superHero.picture }}
                     />
                     <Text style={styles.name}>{this.props.superHero.name}</Text>
                     <LinearGradient style={styles.gradient} colors={["transparent", "#000"]} />
-                    {superHero.isAvenger && <Image style={styles.badge} source={images.avengersBadge} />}
+                    {superHero.isAvenger && <Image style={{
+                        alignSelf: "flex-end",
+                        position: "absolute",
+                        width: 90,
+                        height: 101,
+                        right: 16,
+                        bottom: 16,
+                        zIndex: 3,
+                    }} source={{ uri: images.avengersBadge }} />}
                 </View>
             </TouchableHighlight>
         );
@@ -37,13 +51,6 @@ const styles = StyleSheet.create({
         justifyContent: "flex-end",
         zIndex: 0,
     },
-    backgroundImage: {
-        position: "absolute",
-        height: "100%",
-        width: "100%",
-        zIndex: 1,
-        resizeMode: "cover",
-    },
     gradient: {
         height: 100,
         width: "100%",
@@ -54,15 +61,6 @@ const styles = StyleSheet.create({
         fontSize: 20,
         margin: 16,
         color: "white",
-        zIndex: 3,
-    },
-    badge: {
-        alignSelf: "flex-end",
-        position: "absolute",
-        width: 90,
-        height: 101,
-        right: 16,
-        bottom: 16,
         zIndex: 3,
     },
 });

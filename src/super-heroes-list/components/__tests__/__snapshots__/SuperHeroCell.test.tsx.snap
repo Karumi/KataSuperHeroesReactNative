@@ -2,15 +2,8 @@
 
 exports[`renders a regular super hero and does not show the avengers badge 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -18,8 +11,6 @@ exports[`renders a regular super hero and does not show the avengers badge 1`] =
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={null}
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -47,9 +38,6 @@ exports[`renders a regular super hero and does not show the avengers badge 1`] =
       }
     />
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "white",
@@ -61,16 +49,26 @@ exports[`renders a regular super hero and does not show the avengers badge 1`] =
     >
       Scarlet Witch
     </Text>
-    <ExponentLinearGradient
+    <BVLinearGradient
       colors={
         Array [
           0,
           4278190080,
         ]
       }
-      endPoint={undefined}
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
       locations={null}
-      startPoint={undefined}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
       style={
         Object {
           "height": 100,
@@ -86,15 +84,8 @@ exports[`renders a regular super hero and does not show the avengers badge 1`] =
 
 exports[`renders an avenger super hero and shows the avengers badge 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -102,8 +93,6 @@ exports[`renders an avenger super hero and shows the avengers badge 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={null}
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -131,9 +120,6 @@ exports[`renders an avenger super hero and shows the avengers badge 1`] = `
       }
     />
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "white",
@@ -145,16 +131,26 @@ exports[`renders an avenger super hero and shows the avengers badge 1`] = `
     >
       Iron Man
     </Text>
-    <ExponentLinearGradient
+    <BVLinearGradient
       colors={
         Array [
           0,
           4278190080,
         ]
       }
-      endPoint={undefined}
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
       locations={null}
-      startPoint={undefined}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
       style={
         Object {
           "height": 100,
@@ -165,7 +161,11 @@ exports[`renders an avenger super hero and shows the avengers badge 1`] = `
       }
     />
     <Image
-      source="avengersBadge"
+      source={
+        Object {
+          "uri": "ic_avengers",
+        }
+      }
       style={
         Object {
           "alignSelf": "flex-end",
