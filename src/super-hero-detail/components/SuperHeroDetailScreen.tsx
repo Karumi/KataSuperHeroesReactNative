@@ -34,7 +34,9 @@ class SuperHeroDetailScreen extends React.Component<Props> {
     }
 
     public componentWillUnmount() {
-        this.props.onUnmount();
+        setTimeout(() => {
+            this.props.onUnmount();
+        }, 500);
     }
 
     public componentWillReceiveProps(nextProps: Props) {

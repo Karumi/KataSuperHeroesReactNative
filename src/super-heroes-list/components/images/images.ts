@@ -1,5 +1,5 @@
 const images =  {
-    avengersBadge: "ic-avengers",
+    avengersBadge: "ic_avengers",
 };
 
 export default images;
