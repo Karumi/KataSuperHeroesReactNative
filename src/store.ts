@@ -1,4 +1,4 @@
-import { applyMiddleware, combineReducers, createStore } from "redux";
+import { applyMiddleware, combineReducers, createStore, Store } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "remote-redux-devtools";
 import { StateType } from "typesafe-actions";
@@ -15,7 +15,7 @@ const rootReducer = combineReducers({
     superHeroDetail: superHeroDetailReducer,
 });
 
-function configureStore(initialState?: object) {
+function configureStore(initialState?: object): Store<RootState, RootAction> {
     const middleware = composeWithDevTools(
         applyMiddleware(thunk),
     );
@@ -24,4 +24,4 @@ function configureStore(initialState?: object) {
         initialState!,
         middleware);
 }
-export default configureStore();
+export default configureStore;

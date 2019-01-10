@@ -1,5 +1,7 @@
 import { SuperHero } from "../core/model";
 
+export const anySuperHeroId: string = "Gambito";
+
 export const anyListOfSuperHeroes: SuperHero[] = [
     new SuperHero("Scarlet Witch",
         "https://i.annihil.us/u/prod/marvel/i/mg/9/b0/537bc2375dfb9.jpg",

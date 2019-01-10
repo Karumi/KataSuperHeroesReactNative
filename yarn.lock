@@ -619,6 +619,12 @@
   dependencies:
     redux "^4.0.0"
 
+"@types/remote-redux-devtools@^0.5.3":
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/@types/remote-redux-devtools/-/remote-redux-devtools-0.5.3.tgz#04a1ed04566bfd0115be14dc933d5c47a6e59676"
+  dependencies:
+    redux "^4.0.0"
+
 abab@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/abab/-/abab-2.0.0.tgz#aba0ab4c5eee2d4c79d3487d85450fb2376ebb0f"

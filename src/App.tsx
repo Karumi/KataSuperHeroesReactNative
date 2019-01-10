@@ -5,6 +5,8 @@ import appStore from "./store";
 import SuperHeroesDetailScreen from "./super-hero-detail/components/SuperHeroDetailScreen";
 import SuperHeroesListScreen from "./super-heroes-list/components/SuperHeroesListScreen";
 
+const store = appStore();
+
 const AppNavigationStack = createStackNavigator({
     SuperHeroListScreen: {
         screen: SuperHeroesListScreen,
@@ -17,7 +19,7 @@ const AppNavigationStack = createStackNavigator({
 class App extends React.Component {
     public render() {
         return (
-            <Provider store={appStore}>
+            <Provider store={store}>
                 <AppNavigationStack />
             </Provider>
         );

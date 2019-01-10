@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates the store using the initial state 1`] = `
+Object {
+  "loading": true,
+  "superHero": None {
+    "_tag": "None",
+  },
+}
+`;
+
+exports[`mark the loading property as true while fetching the super hero by id 1`] = `
+Object {
+  "loading": true,
+  "superHero": None {
+    "_tag": "None",
+  },
+}
+`;
