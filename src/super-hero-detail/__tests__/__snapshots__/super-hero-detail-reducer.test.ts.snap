@@ -9,6 +9,15 @@ Object {
 }
 `;
 
+exports[`mark the loading property as false and store the super hero fetched 1`] = `
+Object {
+  "loading": true,
+  "superHero": None {
+    "_tag": "None",
+  },
+}
+`;
+
 exports[`mark the loading property as true while fetching the super hero by id 1`] = `
 Object {
   "loading": true,
