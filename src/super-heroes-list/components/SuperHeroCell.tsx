@@ -38,7 +38,7 @@ class SuperHeroCell extends React.Component<Props> {
                         right: 16,
                         bottom: 16,
                         zIndex: 3,
-                    }} source={{ uri: images.avengersBadge }} />}
+                    }} source={images.avengersBadge } />}
                 </View>
             </TouchableHighlight>
         );

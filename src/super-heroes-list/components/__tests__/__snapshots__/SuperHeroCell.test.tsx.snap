@@ -163,7 +163,7 @@ exports[`renders an avenger super hero and shows the avengers badge 1`] = `
     <Image
       source={
         Object {
-          "uri": "ic_avengers",
+          "testUri": "../../../src/super-heroes-list/components/images/ic_avengers.png",
         }
       }
       style={
