@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "KataSuperHeroesReactNative-tvOS.app"
-               BlueprintName = "KataSuperHeroesReactNative-tvOS"
-               ReferencedContainer = "container:KataSuperHeroesReactNative.xcodeproj">
+               BuildableName = "katasuperheroesreactnative-tvOS.app"
+               BlueprintName = "katasuperheroesreactnative-tvOS"
+               ReferencedContainer = "container:katasuperheroesreactnative.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "KataSuperHeroesReactNative-tvOSTests.xctest"
-               BlueprintName = "KataSuperHeroesReactNative-tvOSTests"
-               ReferencedContainer = "container:KataSuperHeroesReactNative.xcodeproj">
+               BuildableName = "katasuperheroesreactnative-tvOSTests.xctest"
+               BlueprintName = "katasuperheroesreactnative-tvOSTests"
+               ReferencedContainer = "container:katasuperheroesreactnative.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "KataSuperHeroesReactNative-tvOSTests.xctest"
-               BlueprintName = "KataSuperHeroesReactNative-tvOSTests"
-               ReferencedContainer = "container:KataSuperHeroesReactNative.xcodeproj">
+               BuildableName = "katasuperheroesreactnative-tvOSTests.xctest"
+               BlueprintName = "katasuperheroesreactnative-tvOSTests"
+               ReferencedContainer = "container:katasuperheroesreactnative.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "KataSuperHeroesReactNative-tvOS.app"
-            BlueprintName = "KataSuperHeroesReactNative-tvOS"
-            ReferencedContainer = "container:KataSuperHeroesReactNative.xcodeproj">
+            BuildableName = "katasuperheroesreactnative-tvOS.app"
+            BlueprintName = "katasuperheroesreactnative-tvOS"
+            ReferencedContainer = "container:katasuperheroesreactnative.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "KataSuperHeroesReactNative-tvOS.app"
-            BlueprintName = "KataSuperHeroesReactNative-tvOS"
-            ReferencedContainer = "container:KataSuperHeroesReactNative.xcodeproj">
+            BuildableName = "katasuperheroesreactnative-tvOS.app"
+            BlueprintName = "katasuperheroesreactnative-tvOS"
+            ReferencedContainer = "container:katasuperheroesreactnative.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "KataSuperHeroesReactNative-tvOS.app"
-            BlueprintName = "KataSuperHeroesReactNative-tvOS"
-            ReferencedContainer = "container:KataSuperHeroesReactNative.xcodeproj">
+            BuildableName = "katasuperheroesreactnative-tvOS.app"
+            BlueprintName = "katasuperheroesreactnative-tvOS"
+            ReferencedContainer = "container:katasuperheroesreactnative.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

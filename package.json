@@ -18,7 +18,7 @@
     "fp-ts": "^1.9.0",
     "react": "16.6.0-alpha.8af6728",
     "react-native": "0.58.6",
-    "react-native-linear-gradient": "^2.4.2",
+    "react-native-linear-gradient": "^2.5.4",
     "react-navigation": "^2.18.0",
     "react-redux": "^5.0.7",
     "redux": "^4.0.1",
