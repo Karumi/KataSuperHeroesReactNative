@@ -86,13 +86,11 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = (state: RootState) => ({
-    loading: state.superHeroDetail.loading,
-    superHero: state.superHeroDetail.superHero,
+    
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<Action>) => bindActionCreators({
-    onMount: fetchSuperHeroById,
-    onUnmount: clearSuperHero,
+    
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(SuperHeroDetailScreen);

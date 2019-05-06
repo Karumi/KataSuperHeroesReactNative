@@ -20,7 +20,7 @@ interface Props {
 
 class SuperHeroesListScreen extends React.Component<Props> {
 
-    public static navigationOptions = navigationOptions("Kata Super Heroes");
+    public static navigationOptions = navigationOptions("");
 
     public componentWillMount() {
         this.props.onMount();
@@ -35,7 +35,6 @@ class SuperHeroesListScreen extends React.Component<Props> {
         return (
             <View
                 style={styles.screen}>
-                {loading && <Loading />}
                 {shouldShowEmptyCase && <EmptyCase />}
                 {shouldShowSuperHeroesList && <SuperHeroesList
                     onSuperHeroCellTap={(superHero) => openSuperHeroDetailScreen(navigate, superHero.name)}

@@ -18,16 +18,6 @@ class SuperHeroCell extends React.Component<Props> {
             <TouchableHighlight onPress={() => this.props.onTap(this.props.superHero)}>
                 <View
                     style={styles.container}>
-                    <Image
-                        style={{
-                            position: "absolute",
-                            height: "100%",
-                            width: "100%",
-                            zIndex: 1,
-                            resizeMode: "cover",
-                        }}
-                        source={{ uri: superHero.picture }}
-                    />
                     <Text style={styles.name}>{this.props.superHero.name}</Text>
                     <LinearGradient style={styles.gradient} colors={["transparent", "#000"]} />
                     {superHero.isAvenger && <Image style={{
